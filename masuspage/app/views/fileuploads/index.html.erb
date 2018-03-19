@@ -1,0 +1,27 @@
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+<%= link_to "New Fileupload", new_fileupload_path, class: "btn btn-primary" %>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Download Link</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @fileuploads.each do |fileupload| %>
+      <tr>
+        <td><%= fileupload.name %></td>
+        <td><%= link_to "Download Fileupload", fileupload.attachment_url %></td>
+        <td><%= button_to "Delete",  fileupload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{fileupload.name}?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
