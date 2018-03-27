@@ -3,6 +3,9 @@ class FileuploadsController < ApplicationController
   @fileuploads = Fileupload.all
 end
 
+def show
+end
+
 def new
   @fileupload = Fileupload.new
 end

@@ -11,6 +11,6 @@ Rails.application.routes.draw do
         }
         resources :assigment
         resources :groups
-        root "fileuploads#index"
+        root "groups#index"
 
 end

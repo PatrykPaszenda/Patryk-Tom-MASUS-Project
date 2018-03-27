@@ -10,7 +10,7 @@
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Student Name</th>
       <th>Download Link</th>
       <th>&nbsp;</th>
     </tr>
@@ -19,7 +19,7 @@
     <% @fileuploads.each do |fileupload| %>
       <tr>
         <td><%= fileupload.name %></td>
-        <td><%= link_to "Download Fileupload", fileupload.attachment_url %></td>
+        <td><%= link_to "Show Assigment", fileupload.attachment_url %></td>
         <td><%= button_to "Delete",  fileupload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{fileupload.name}?" %></td>
       </tr>
     <% end %>

@@ -5,5 +5,8 @@
   <%= @group.name %>
 </p>
 
+<%= link_to 'New Assignment', new_assigment_path %>
+<%= link_to 'File Upload', new_fileupload_path %>
+<%= link_to 'Show Submissions', fileuploads_path(@fileupload) %>
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
