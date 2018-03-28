@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20180316111530) do
   end
 
   create_table "group_memberships", force: :cascade do |t|
-    t.string   "member_type",     null: false
-    t.integer  "member_id",       null: false
+    t.string   "user_type",       null: false
+    t.integer  "user_id",         null: false
     t.string   "group_type"
     t.integer  "group_id"
     t.string   "group_name"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20180316111530) do
     t.datetime "updated_at"
     t.index ["group_name"], name: "index_group_memberships_on_group_name"
     t.index ["group_type", "group_id"], name: "index_group_memberships_on_group_type_and_group_id"
-    t.index ["member_type", "member_id"], name: "index_group_memberships_on_member_type_and_member_id"
+    t.index ["user_type", "user_id"], name: "index_group_memberships_on_user_type_and_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
