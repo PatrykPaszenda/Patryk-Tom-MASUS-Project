@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20180316111530) do
   end
 
   create_table "assigments", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.string "class"
+    t.string   "name"
+    t.string   "type"
+    t.string   "group"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "files", force: :cascade do |t|

@@ -55,4 +55,4 @@ class AssigmentsController < ApplicationController
     def assigment_params
       params.require(:assigment).permit(:name)
     end
-end
+ end

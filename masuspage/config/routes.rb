@@ -9,8 +9,8 @@ Rails.application.routes.draw do
         devise_for :users, controllers: {
           sessions: 'users/sessions'
         }
-        resources :assigment
+        resources :assigments
         resources :groups
-        root "groups#index"
+        root "assigments#index"
 
 end

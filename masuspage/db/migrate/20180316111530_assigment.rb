@@ -3,8 +3,9 @@ class Assigment < ActiveRecord::Migration[5.0]
     create_table :assigments do |t|
       t.string :name
       t.string :type
-      t.string :class
+      t.string :group
 
+      t.timestamps
     end
   end
 end
