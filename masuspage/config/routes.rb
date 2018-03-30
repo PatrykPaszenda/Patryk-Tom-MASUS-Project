@@ -11,6 +11,6 @@ Rails.application.routes.draw do
         }
         resources :assigments
         resources :groups
-        root "assigments#index"
+        root "home#home"
 
 end

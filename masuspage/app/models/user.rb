@@ -14,10 +14,10 @@ def inactive_message
     super # Use whatever other message
   end
 end
-after_create :send_admin_mail
-def send_admin_mail
-  AdminMailer.new_user_waiting_for_approval(self).deliver
-end
+# after_create :send_admin_mail
+# def send_admin_mail
+#   AdminMailer.new_user_waiting_for_approval(self).deliver
+# end
 def self.send_reset_password_instructions(attributes={})
    recoverable = find_or_initialize_with_errors(reset_password_keys, attributes, :not_found)
    if !recoverable.approved?
